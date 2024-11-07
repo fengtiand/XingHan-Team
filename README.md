@@ -2,7 +2,7 @@
 <p align="center">
 <a href="https://www.ococn.cn">
 <img alt="Static Badge" src="https://img.shields.io/badge/%E6%98%9F%E6%B6%B5%E7%BD%91%E7%BB%9C-%E5%B7%A5%E4%BD%9C%E5%AE%A4?style=flat&logoColor=violet&logoSize=auto&label=%E5%AE%98%E7%BD%91&cacheSeconds=3600"></a>
-<a>
+<a href="https://blog.ococn.cn/">
 <img alt="Static Badge" src="https://img.shields.io/badge/%E5%A5%89%E5%A4%A9%E5%8D%9A%E5%AE%A2-%E5%8D%9A%E5%AE%A2?style=flat&logo=appveyor&logoColor=violet&label=%E5%8D%9A%E5%AE%A2&color=%23FF8C00&cacheSeconds=3600">
 </a>
 <a>
