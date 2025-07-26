@@ -5,7 +5,7 @@ FROM php:8.0-apache
 WORKDIR /var/www/html
 
 # 安装系统依赖
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
@@ -14,8 +14,9 @@ RUN apt-get update && apt-get install -y \
     git \
     default-mysql-client \
     curl \
+    && apt-get autoremove -y \
     && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # 安装PHP扩展
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
