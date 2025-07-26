@@ -12,8 +12,9 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     git \
-    mysql-client \
+    default-mysql-client \
     curl \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # 安装PHP扩展
