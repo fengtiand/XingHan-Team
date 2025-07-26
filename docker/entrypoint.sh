@@ -3,7 +3,7 @@ set -e
 
 # 等待MySQL服务启动
 echo "等待MySQL服务启动..."
-while ! mysqladmin ping -h"$DB_HOST" --silent; do
+while ! mysqladmin ping -h "$DB_HOST" --silent; do
     sleep 1
 done
 echo "MySQL服务已启动"
