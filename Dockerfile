@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     git \
+    mysql-client \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # 安装PHP扩展
@@ -38,8 +40,7 @@ RUN mkdir -p /var/www/html/uploads \
     && chown -R www-data:www-data /var/www/html/uploads \
     && chmod -R 777 /var/www/html/uploads
 
-# 安装MySQL客户端工具（用于健康检查）
-RUN apt-get update && apt-get install -y mysql-client && rm -rf /var/lib/apt/lists/*
+
 
 # 复制Apache配置
 COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
