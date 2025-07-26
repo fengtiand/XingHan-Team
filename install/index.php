@@ -154,6 +154,10 @@ function check_extension($name)
                     <input type="text" class="form-control" id="db_host" name="db_host" value="localhost" required>
                 </div>
                 <div class="mb-3">
+                    <label for="db_port" class="form-label">数据库端口</label>
+                    <input type="number" class="form-control" id="db_port" name="db_port" value="3306" min="1" max="65535" required>
+                </div>
+                <div class="mb-3">
                     <label for="db_name" class="form-label">数据库名称</label>
                     <input type="text" class="form-control" id="db_name" name="db_name" required>
                 </div>
