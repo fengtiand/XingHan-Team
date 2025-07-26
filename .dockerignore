@@ -1,0 +1,44 @@
+# Git相关
+.git
+.gitignore
+
+# Docker相关
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# 文档
+README.md
+*.md
+
+# 日志文件
+*.log
+logs/
+
+# 临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE配置
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 备份文件
+*.bak
+*.backup
+
+# 缓存目录
+cache/
+temp/
+
+# 本地配置文件（避免覆盖容器配置）
+db_connect.php
+config.php
+
+# 上传文件（通过volume挂载）
+uploads/*
+!uploads/.gitkeep
