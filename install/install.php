@@ -38,13 +38,14 @@ if (file_exists($db_config_file)) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $db_host = $_POST['db_host'];
+    $db_port = $_POST['db_port'];
     $db_name = $_POST['db_name'];
     $db_user = $_POST['db_user'];
     $db_pass = $_POST['db_pass'];
     $admin_user = $_POST['admin_user'];
     $admin_pass = $_POST['admin_pass'];
 
-    $conn = new mysqli($db_host, $db_user, $db_pass);
+    $conn = new mysqli($db_host, $db_user, $db_pass, '', $db_port);
     if ($conn->connect_error) {
         $_SESSION['error'] = "数据库连接失败: " . $conn->connect_error;
         header('Location: index.php?step=2');
@@ -80,6 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="mt-3">
                         <form action="install.php?force=1" method="post">
                             <input type="hidden" name="db_host" value="' . htmlspecialchars($db_host) . '">
+                            <input type="hidden" name="db_port" value="' . htmlspecialchars($db_port) . '">
                             <input type="hidden" name="db_name" value="' . htmlspecialchars($db_name) . '">
                             <input type="hidden" name="db_user" value="' . htmlspecialchars($db_user) . '">
                             <input type="hidden" name="db_pass" value="' . htmlspecialchars($db_pass) . '">
@@ -111,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $config_content = "<?php\n";
     $config_content .= "ini_set('default_charset', 'UTF-8');\n";
-    $config_content .= "\$conn = new mysqli('$db_host', '$db_user', '$db_pass', '$db_name');\n";
+    $config_content .= "\$conn = new mysqli('$db_host', '$db_user', '$db_pass', '$db_name', $db_port);\n";
     $config_content .= "if (\$conn->connect_error) {\n";
     $config_content .= "    die(\"连接失败: \" . \$conn->connect_error);\n";
     $config_content .= "}\n";
