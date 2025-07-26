@@ -11,7 +11,7 @@ CREATE TABLE `admin_users` (
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 
 
@@ -24,7 +24,7 @@ CREATE TABLE `carousel` (
   `image_url` varchar(255) NOT NULL,
   `order_num` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 LOCK TABLES `carousel` WRITE;
@@ -38,7 +38,7 @@ CREATE TABLE `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 LOCK TABLES `categories` WRITE;
 
@@ -56,7 +56,7 @@ CREATE TABLE `content` (
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4;
 
 
 LOCK TABLES `content` WRITE;
@@ -77,7 +77,7 @@ CREATE TABLE `portfolio` (
   `tag` varchar(50) DEFAULT '6年老品牌',
   `status` enum('show','hide') DEFAULT 'show',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 
 LOCK TABLES `portfolio` WRITE;
 
@@ -91,7 +91,7 @@ CREATE TABLE `site_settings` (
   `setting_key` varchar(50) NOT NULL,
   `setting_value` text,
   PRIMARY KEY (`setting_key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 LOCK TABLES `site_settings` WRITE;
 
@@ -113,7 +113,7 @@ CREATE TABLE `team_members` (
   `status` enum('normal','paused') DEFAULT 'normal',
   `review_status` enum('approved','pending','rejected') DEFAULT 'pending',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
 LOCK TABLES `team_members` WRITE;
 
@@ -129,7 +129,7 @@ CREATE TABLE `verification_codes` (
   `expires_at` datetime NOT NULL,
   `last_sent_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 LOCK TABLES `verification_codes` WRITE;
 UNLOCK TABLES;
 

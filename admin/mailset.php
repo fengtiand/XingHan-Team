@@ -79,14 +79,6 @@ while ($row = $result->fetch_assoc()) {
  */ -->
 <div class="content">
     <h2 class="content-heading">邮箱发信设置</h2>
-    
-    <?php if (!empty($alert)): ?>
-    <div class="block block-rounded">
-        <div class="block-content">
-            <?php echo $alert; ?>
-        </div>
-    </div>
-    <?php endif; ?>
 
     <div class="block block-rounded">
         <div class="block-header block-header-default">

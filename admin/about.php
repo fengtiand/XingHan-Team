@@ -13,7 +13,7 @@ include 'header.php';
         <div class="block-content">
             <div class="py-4 text-center">
                 <h2 class="mb-2">XingHan-Team 管理系统</h2>
-                <h3 class="fs-base fw-medium text-muted mb-4">Version 1.7.1</h3>
+                <h3 class="fs-base fw-medium text-muted mb-4">Version 1.7.3</h3>
             </div>
 
             <div class="row justify-content-center">
@@ -21,7 +21,7 @@ include 'header.php';
                     <div class="mb-5">
                         <h4 class="mb-3">版本说明</h4>
                         <div class="alert alert-primary">
-                            <p class="mb-0">当前版本：V1.7.1 (发布日期：2025-01-03)</p>
+                            <p class="mb-0">当前版本：V1.7.3 (发布日期：2025-07-25)</p>
                         </div>
                         <table class="table table-bordered table-striped">
                             <tbody>
@@ -70,9 +70,9 @@ include 'header.php';
                     <div class="mb-5">
                         <h4 class="mb-3">版权声明</h4>
                         <div class="alert alert-warning mb-4">
-                            <p class="mb-0">本版本开源发布，供大家使用和学习，未经授权禁止商业用途。</p>
+                            <p class="mb-0">本版本开源发布，供大家使用和学习，未经授权禁止商业用途（禁止售卖二次修改源码，仅限个人学习使用）。</p>
                         </div>
-                        <p>版权所有 &copy; 2024 XingHan-Team。保留所有权利。</p>
+                        <p>版权所有 &copy; 2024 - 2025 XingHan-Team。保留所有权利。</p>
                         <p>本软件是一个开源项目，旨在为开发者提供学习和参考。在使用本软件时，请遵守以下规则：</p>
                         <ul class="list-group push">
                             <li class="list-group-item">允许个人和教育用途的使用</li>

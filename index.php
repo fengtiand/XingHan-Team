@@ -8,7 +8,7 @@ if (!file_exists($install_lock_file)) {
 }
 
 if (!file_exists($db_config_file)) {
-    die('数据库配置文件丢失。请重新安装系统。');
+    die('数据库配置文件丢失。请重新安装系统。（删除install.lock）');
 }
 
 require_once 'db_connect.php';

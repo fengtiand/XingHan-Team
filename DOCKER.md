@@ -20,7 +20,7 @@ docker-compose ps
 
 ```bash
 # 拉取镜像
-docker pull ghcr.io/your-username/xinghanteam:latest
+docker pull ghcr.io/fengtiand/xinghan-team:latest
 
 # 启动MySQL数据库
 docker run -d \
@@ -39,7 +39,7 @@ docker run -d \
   -e DB_USER=root \
   -e DB_PASS=xinghan123 \
   -p 8080:80 \
-  ghcr.io/your-username/xinghanteam:latest
+  ghcr.io/fengtiand/xinghan-team:latest
 ```
 
 ## 📋 服务说明

@@ -211,7 +211,7 @@ $result = $conn->query("SELECT * FROM team_members ORDER BY id");
                     </div>
                     <div class="mb-3">
                         <label class="form-label">简介</label>
-                        <textarea class="form-control" name="bio" rows="4"></textarea>
+                        <textarea class="form-control" name="bio" rows="4" placeholder="请输入成员简介"></textarea>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">头像</label>
@@ -284,8 +284,8 @@ $result = $conn->query("SELECT * FROM team_members ORDER BY id");
                         <input type="text" class="form-control" name="position" id="editMemberPosition" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">简介</label>
-                        <textarea class="form-control" name="bio" id="editMemberBio" rows="4"></textarea>
+                        <label class="form-label">简介 <small class="text-muted">(支持emoji表情 😊)</small></label>
+                        <textarea class="form-control" name="bio" id="editMemberBio" rows="4" placeholder="请输入成员简介，支持emoji表情 😊🎉💪"></textarea>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">头像</label>
@@ -340,6 +340,20 @@ $result = $conn->query("SELECT * FROM team_members ORDER BY id");
         </div>
     </div>
 </div>
+
+<style>
+/* 支持emoji表情显示的样式 */
+textarea[name="bio"] {
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI", system-ui, sans-serif;
+    line-height: 1.5;
+}
+
+.emoji-hint {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+</style>
 
 <script>
 
