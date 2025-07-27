@@ -43,6 +43,7 @@ function check_extension($name)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XingHan-Team官网程序 - 安装程序</title>
     <link href="https://cdn.jsdelivr.net.cn/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #f8f9fa;
@@ -93,6 +94,11 @@ function check_extension($name)
 <body>
     <div class="container">
         <h1 class="text-center">XingHan-Team程序安装</h1>
+        <div class="text-center mb-4">
+            <a href="http://doc.xhus.cn/web/#/612172002/256951062" target="_blank" class="btn btn-outline-primary">
+                <i class="fas fa-book"></i> 查看安装教程
+            </a>
+        </div>
         <?php if ($step == 1): ?>
             <div class="card mb-4">
                 <div class="card-body">
